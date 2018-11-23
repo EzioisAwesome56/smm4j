@@ -21,7 +21,7 @@ public class Smm4j {
         }
     }
 
-    public static void cli(String[] args){
+    private static void cli(String[] args){
         // check if its blank
         String id;
         try{
