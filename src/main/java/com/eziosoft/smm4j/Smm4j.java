@@ -82,7 +82,6 @@ public class Smm4j {
         // grab fullimage also
         String fullimglink = card.select("img.course-image-full").attr("src");
         // then form into list
-        String[] output = {name, diff, auth, imglink, fullimglink, id};
-        return output;
+        return new String[]{name, diff, auth, imglink, fullimglink, id, baseurl + id};
     }
 }
