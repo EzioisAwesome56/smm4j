@@ -14,6 +14,10 @@ public class Smm4j {
 
     // class to get level details
     public static String[] getLevel(String id){
-
+        String[] error = {"error"};
+        // is the level id provided blank?
+        if (id.equals(null)){
+            return error;
+        }
     }
 }
