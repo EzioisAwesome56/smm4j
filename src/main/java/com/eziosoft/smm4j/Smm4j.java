@@ -16,9 +16,30 @@ public class Smm4j {
         if (args.length > 0){
             // then parse args
             if (args[0].equals("-cli")){
-                System.out.println("Command line mode Selected!");
+                cli(args);
             }
         }
+    }
+
+    public static void cli(String[] args){
+        // check if its blank
+        String id;
+        try{
+            id = args[1];
+        } catch (NullPointerException e){
+            System.out.println("Error: you gave no level id!");
+            return;
+        }
+        // pass id to getlevel
+        String[] a = getLevel(id);
+        // error?
+        if (a[0].equals("error")){
+            System.out.println("An error has occured!");
+            return;
+        }
+        // print all the stuff
+        System.out.println("NAME: "+a[0]);
+        System.out.println("DIFF: "+a[1]);
     }
 
     // class to get level details
@@ -45,5 +66,12 @@ public class Smm4j {
         }
         // get just the course card
         Elements card = doc.select("div.course-card");
+        // grab difficulty
+        String diff = doc.select("div.course-card > div").first().ownText();
+        // get course name
+        String name = card.select("div.course-title").text();
+        // then form into list
+        String[] output = {name, diff};
+        return output;
     }
 }
