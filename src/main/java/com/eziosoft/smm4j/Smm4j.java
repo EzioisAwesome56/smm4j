@@ -38,6 +38,7 @@ public class Smm4j {
             return;
         }
         // print all the stuff
+        System.out.println("URL: "+a[6]);
         System.out.println("ID: "+a[5]);
         System.out.println("NAME: "+a[0]);
         System.out.println("DIFF: "+a[1]);
