@@ -40,6 +40,7 @@ public class Smm4j {
         // print all the stuff
         System.out.println("NAME: "+a[0]);
         System.out.println("DIFF: "+a[1]);
+        System.out.println("AUTHOR: "+a[2]);
     }
 
     // class to get level details
@@ -70,8 +71,11 @@ public class Smm4j {
         String diff = doc.select("div.course-card > div").first().ownText();
         // get course name
         String name = card.select("div.course-title").text();
+        // grab Creator name
+        Element maker = card.select("div.creator-info").first();
+        String auth = maker.ownText();
         // then form into list
-        String[] output = {name, diff};
+        String[] output = {name, diff, auth};
         return output;
     }
 }
