@@ -41,6 +41,7 @@ public class Smm4j {
         System.out.println("NAME: "+a[0]);
         System.out.println("DIFF: "+a[1]);
         System.out.println("AUTHOR: "+a[2]);
+        System.out.println("IMG LINK: "+a[3]);
     }
 
     // class to get level details
@@ -73,9 +74,11 @@ public class Smm4j {
         String name = card.select("div.course-title").text();
         // grab Creator name
         Element maker = card.select("div.creator-info").first();
-        String auth = maker.ownText();
+        String auth = maker.text();
+        // get image link
+        String imglink = card.select("img.course-image").attr("src");
         // then form into list
-        String[] output = {name, diff, auth};
+        String[] output = {name, diff, auth, imglink};
         return output;
     }
 }
