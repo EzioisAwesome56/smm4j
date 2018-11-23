@@ -3,7 +3,7 @@ Super Mario Maker for Java (or smm4j), is a basic library that
 gathers information about levels from the bookmark site using a level id.
 It is powered by jsoup.
 ## Notice
-You may be banned from accessing the Bookmark site for using this. It is unknown whether or not this is the cause, but just be careful.
+Worse come to worse, your ip may be unable to use the site for an hour if you send too many requests. Just be careful
 ## Installation
 First, add this to your maven pom.xml
 ```xml
