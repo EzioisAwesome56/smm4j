@@ -21,5 +21,5 @@ Then just add the repo itself
 </dependency>
 ```
 ## Usage
-Call getLevel(id), replacing ID with your level id as a string.
-It will return a String[] with 7 entires.
+getLevel() takes your level id as a string for arguments, spits out a 7 entry long String[] with all the info you need<br>
+makeUrl() takes your level id as input and returns the mario maker bookmark site url for that level<br>
