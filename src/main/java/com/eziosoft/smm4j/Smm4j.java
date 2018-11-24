@@ -33,11 +33,12 @@ public class Smm4j {
         String html = Util.getDocument(baseurl + id);
         if (html.equals("403")){
             System.out.println("Nintendo is rate limiting you!");
-            return new String[]{"403"};
+            return new String[]{"403" +
+                    ""};
         }
         doc = Jsoup.parse(html);
         // is there an error?
-        if (doc.select("div.error-description").equals("The page could not be found.")){
+        if (doc.select("div.error-description").text().equals("The page could not be found.")){
             String[] out = {"404"};
             return out;
         }
