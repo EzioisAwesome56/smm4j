@@ -13,7 +13,7 @@ public class Random {
         String html = Util.getDocument("https://supermariomakerbookmark.nintendo.net/pickup");
         if (html.equals("403")){
             System.out.println("Nintendo is rate limiting you!");
-            return "error";
+            return "403";
         }
         Document doc = Jsoup.parse(html);
         Elements wrapper =  doc.select("div.two-column-wrapper");

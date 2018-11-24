@@ -33,7 +33,7 @@ public class Smm4j {
         String html = Util.getDocument(baseurl + id);
         if (html.equals("403")){
             System.out.println("Nintendo is rate limiting you!");
-            return new String[]{"error"};
+            return new String[]{"403"};
         }
         doc = Jsoup.parse(html);
         // is there an error?
