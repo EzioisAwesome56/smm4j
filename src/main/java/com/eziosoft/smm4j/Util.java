@@ -22,4 +22,8 @@ public class Util {
         // spit the document out as a string
         return doc.html();
     }
+
+    public static String makeUrl(String id){
+        return Smm4j.baseurl + id;
+    }
 }

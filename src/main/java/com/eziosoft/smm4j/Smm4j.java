@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Smm4j {
 
-    private static String baseurl = "https://supermariomakerbookmark.nintendo.net/courses/";
+    protected static String baseurl = "https://supermariomakerbookmark.nintendo.net/courses/";
 
     public static void main(String[] args){
         // check if arguments where provided
