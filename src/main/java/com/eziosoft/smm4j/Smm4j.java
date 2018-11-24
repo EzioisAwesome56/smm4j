@@ -26,18 +26,12 @@ public class Smm4j {
         String[] error = {"error"};
         Document doc;
         // is the level id provided blank?
-        if (id.equals(null)){
+        if (id.length() == 0){
             return error;
         }
         // use jsoup to grab the document
-        try {
-            doc = Jsoup.connect(baseurl + id).userAgent("Mozilla/5.0 (Debian Stretch) Gecko/20100101 Firefox/63.0").get();
-        } catch (IOException e){
-            System.out.println("Error!");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-            return error;
-        }
+        String html = Util.getDocument(baseurl + id);
+        doc = Jsoup.parse(html);
         // is there an error?
         if (doc.select("div.error-description").equals("The page could not be found.")){
             String[] out = {"404"};

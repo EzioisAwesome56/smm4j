@@ -17,6 +17,9 @@ class Cli {
         if (a[0].equals("error")){
             System.out.println("An error has occured!");
             return;
+        } else if (a[0].equals("403")){
+            System.out.println("Error: Nintendo is rate limiting you!");
+            return;
         }
         // print all the stuff
         System.out.println("URL: "+a[6]);
