@@ -3,6 +3,12 @@ package com.eziosoft.smm4j;
 class Cli {
 
     static void cli(String[] args){
+        boolean rand = false;
+        String extid = "";
+        if (args[1].equals("--rand")){
+            extid = Random.GetRandomLevel();
+            rand = true;
+        }
         // check if its blank
         String id;
         try{
@@ -10,6 +16,9 @@ class Cli {
         } catch (NullPointerException e){
             System.out.println("Error: you gave no level id!");
             return;
+        }
+        if (rand){
+            id = extid;
         }
         // pass id to getlevel
         String[] a = Smm4j.getLevel(id);
