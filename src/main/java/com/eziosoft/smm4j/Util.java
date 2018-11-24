@@ -12,7 +12,7 @@ public class Util {
         Document doc;
         // get the recommended courses page
         try {
-            doc = Jsoup.connect("reeeeeeeeeeee").userAgent("Mozilla/5.0 (Debian Stretch) Firefox/420.0").get();
+            doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (Debian Stretch) Firefox/420.0").get();
         } catch (HttpStatusException e){
             return Integer.toString(e.getStatusCode());
         } catch (IOException e){
