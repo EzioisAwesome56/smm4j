@@ -31,6 +31,10 @@ public class Smm4j {
         }
         // use jsoup to grab the document
         String html = Util.getDocument(baseurl + id);
+        if (html.equals("403")){
+            System.out.println("Nintendo is rate limiting you!");
+            return new String[]{"error"};
+        }
         doc = Jsoup.parse(html);
         // is there an error?
         if (doc.select("div.error-description").equals("The page could not be found.")){
