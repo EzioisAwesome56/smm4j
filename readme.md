@@ -17,7 +17,7 @@ Then just add the repo itself
 <dependency>
     <groupId>com.github.EzioisAwesome56</groupId>
     <artifactId>smm4j</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 </dependency>
 ```
 ## Usage
