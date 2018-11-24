@@ -5,7 +5,7 @@ class Cli {
     static void cli(String[] args){
         boolean rand = false;
         String extid = "";
-        if (args[1].equals("--rand")){
+        if (args[1].equals("-rand")){
             extid = Random.GetRandomLevel();
             rand = true;
         }
