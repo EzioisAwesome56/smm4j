@@ -20,7 +20,7 @@ public class Level {
     private int played;
     private int shared;
     private String author;
-    private String imgURL;
+    public String imgURL;
     private String fullImgURL;
     private int clears;
     private int attempts;
