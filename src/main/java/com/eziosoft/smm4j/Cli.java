@@ -6,7 +6,7 @@ class Cli {
         boolean rand = false;
         String extid = "";
         if (args[1].equals("-rand")){
-            extid = Random.GetRandomLevel();
+            extid = Util.GetRandomLevelID();
             rand = true;
         }
         // check if its blank
@@ -21,9 +21,12 @@ class Cli {
             id = extid;
         }
         // pass id to getlevel
-        String[] a = Smm4j.getLevel(id);
+        Level a = Smm4j.getLevel(id);
+        //The following code was commented out due to errors, and has yet to see a rewrite.
+
+
         // error?
-        if (a[0].equals("error")){
+        /*if (a[0].equals("error")){
             System.out.println("An error has occured!");
             return;
         } else if (a[0].equals("403")){
@@ -37,6 +40,6 @@ class Cli {
         System.out.println("DIFF: "+a[1]);
         System.out.println("AUTHOR: "+a[2]);
         System.out.println("IMG LINK: "+a[3]);
-        System.out.println("FULLIMG LINK: "+a[4]);
+        System.out.println("FULLIMG LINK: "+a[4]);*/
     }
 }
