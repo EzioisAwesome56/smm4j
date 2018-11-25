@@ -22,10 +22,7 @@ public class Smm4j {
     }
 
     // class to get level details
-<<<<<<< HEAD
-=======
     public static Level getLevel(String id){
         return Level.getLevel(id);
->>>>>>> 65f9bda3049df11c66a54fadad3d478336917fea
     }
 }
