@@ -22,40 +22,10 @@ public class Smm4j {
     }
 
     // class to get level details
-    public static String[] getLevel(String id){
-        String[] error = {"error"};
-        Document doc;
-        // is the level id provided blank?
-        if (id.length() == 0){
-            return error;
-        }
-        // use jsoup to grab the document
-        String html = Util.getDocument(baseurl + id);
-        if (html.equals("403")){
-            System.out.println("Nintendo is rate limiting you!");
-            return new String[]{"403" +
-                    ""};
-        }
-        doc = Jsoup.parse(html);
-        // is there an error?
-        if (doc.select("div.error-description").text().equals("The page could not be found.")){
-            String[] out = {"404"};
-            return out;
-        }
-        // get just the course card
-        Elements card = doc.select("div.course-card");
-        // grab difficulty
-        String diff = doc.select("div.course-card > div").first().ownText();
-        // get course name
-        String name = card.select("div.course-title").text();
-        // grab Creator name
-        Element maker = card.select("div.creator-info").first();
-        String auth = maker.text();
-        // get image link
-        String imglink = card.select("img.course-image").attr("src");
-        // grab fullimage also
-        String fullimglink = card.select("img.course-image-full").attr("src");
-        // then form into list
-        return new String[]{name, diff, auth, imglink, fullimglink, id, baseurl + id};
+<<<<<<< HEAD
+=======
+    public static Level getLevel(String id){
+        return Level.getLevel(id);
+>>>>>>> 65f9bda3049df11c66a54fadad3d478336917fea
     }
 }
