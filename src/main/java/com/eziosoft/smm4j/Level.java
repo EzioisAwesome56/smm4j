@@ -13,17 +13,17 @@ import static com.eziosoft.smm4j.Smm4j.baseurl;
 
 public class Level {
 
-    private String id;
-    private String name;
-    private String difficulty;
-    private int liked;
-    private int played;
-    private int shared;
-    private String author;
+    public String id;
+    public String name;
+    public String difficulty;
+    public int liked;
+    public int played;
+    public int shared;
+    public String author;
     public String imgURL;
-    private String fullImgURL;
-    private int clears;
-    private int attempts;
+    public String fullImgURL;
+    public int clears;
+    public int attempts;
 
     private GameSkin skin;
     private String date;
