@@ -20,7 +20,12 @@ Then just add the repo itself
     <version>2.0</version>
 </dependency>
 ```
+## Usage Update note
+Since version 2.0, some functions return different things from version 1.x. Please update your code if you are effected by this
 ## Usage
-getLevel() takes your level id as a string for arguments, spits out a 7 entry long String[] with all the info you need<br>
-makeUrl() takes your level id as input and returns the mario maker bookmark site url for that level<br>
-GetRandomLevel() takes no arguments and returns a persudo random level based on the recommended courses page
+getLevel() takes a level ID as a string and returns a level object. From there, you can use Level.name, level.date, etc, to get information about the submitted level id.<br>
+GetRandomLevelID() takes no arguments and returns a persudo random level id based on the Recommended levels page.<br>
+<b>Both of the above functions throw a NullPointerExeception if nintendo is rate limiting you</b><br>
+ makeUrl() takes a level id for arguments and returns the bookmark page for that level.
+ ## Special thanks
+ Thanks to [Gonson777](https://github.com/Godson777/) for assisting in creation of this library. He did almost all of the work with getting star counts, while rewriting a lot of everything else to make it cleaner. Thanks man!
