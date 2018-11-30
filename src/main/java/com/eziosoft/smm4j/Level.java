@@ -13,17 +13,17 @@ import static com.eziosoft.smm4j.Smm4j.baseurl;
 
 public class Level {
 
-    public String id;
-    public String name;
-    public String difficulty;
-    public int liked;
-    public int played;
-    public int shared;
-    public String author;
-    public String imgURL;
-    public String fullImgURL;
-    public int clears;
-    public int attempts;
+    private String id;
+    private String name;
+    private String difficulty;
+    private int liked;
+    private int played;
+    private int shared;
+    private String author;
+    private String imgURL;
+    private String fullImgURL;
+    private int clears;
+    private int attempts;
 
     private GameSkin skin;
     private String date;
@@ -139,6 +139,10 @@ public class Level {
 
         //That's it! We have everything we need! Let's returned the now completed level object!
         return level;
+    }
+
+    public String id(){
+        return this.id;
     }
 
 
