@@ -17,13 +17,13 @@ Then just add the repo itself
 <dependency>
     <groupId>com.github.EzioisAwesome56</groupId>
     <artifactId>smm4j</artifactId>
-    <version>2.1</version>
+    <version>2.2</version>
 </dependency>
 ```
 ## Usage Update note
 Since version 2.0, some functions return different things from version 1.x. Please update your code if you are effected by this
 ## Usage
-getLevel() takes a level ID as a string and returns a level object. From there, you can use Level.name, level.date, etc, to get information about the submitted level id.<br>
+getLevel() takes a level ID as a string and returns a level object. From there, you can use Level.name(), level.date(), etc, to get information about the submitted level id.<br>
 GetRandomLevelID() takes no arguments and returns a persudo random level id based on the Recommended levels page.<br>
 <b>Both of the above functions throw a NullPointerExeception if nintendo is rate limiting you</b><br>
  makeUrl() takes a level id for arguments and returns the bookmark page for that level.
