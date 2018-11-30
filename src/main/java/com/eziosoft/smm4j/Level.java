@@ -141,8 +141,43 @@ public class Level {
         return level;
     }
 
+    // make a shit load of tiny methoods to return almost everything!
     public String id(){
         return this.id;
+    }
+    public String name(){
+        return this.name;
+    }
+    public String difficulty(){
+        return this.difficulty;
+    }
+    public int liked(){
+        return this.liked;
+    }
+    public int played(){
+        return this.played;
+    }
+    public int shared(){
+        return this.shared;
+    }
+    public String author(){
+        return this.author;
+    }
+    public String imgURL(){
+        return this.imgURL;
+    }
+    public String fullimgURL(){
+        return this.fullImgURL;
+    }
+    public int clears(){
+        return this.clears;
+    }
+    public int attempts(){
+        return this.attempts;
+    }
+    // TODO: returning gameskin stuff...somehow
+    public String date(){
+        return this.date;
     }
 
 
